@@ -1,0 +1,93 @@
+:root {
+    /* Variables CSS */
+      --color-verde: #38a54c; 
+      --color-rojo: #fd0625;
+      /* paleta robada de tailwind, seccion colores: 
+      https://tailwindcss.com/docs/colors*/
+      --color-azul: oklch(62.3% 0.214 259.815);
+    }
+    
+body{
+    /* Quitar estilos por defecto del navegador */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color-azul);
+}
+    
+.logo-game-stop{
+    width: 125px;
+    height: 75px;
+}
+
+.texto-blanco{
+    color: white;
+} 
+
+
+nav h2{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    background-color: oklch(42.4% 0.199 265.638);    
+}
+
+.parte-superior-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vh 5vh;
+
+}
+
+/* 
+    =======================================
+    dsp cambio los siguientes estilos: 
+=======================================
+*/
+
+.parte-inferior-nav {
+
+  padding: 10px 5vh;
+}
+
+.parte-inferior-nav ul {
+  display: flex;
+  justify-content: center; /* centra los elementos */
+  gap: 30px; /* separa los items de forma pareja */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.parte-inferior-nav a {
+  text-decoration: none;
+  color: white; /* más contraste sobre el fondo rojo */
+  background-color: var(--color-rojo);
+  padding: 8px 16px;
+  border-radius: 6px; /* bordes redondeados, más moderno */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover bonito */
+.parte-inferior-nav a:hover {
+  background-color: #c9041d; /* rojo más oscuro */
+  transform: scale(1.05);
+}
+
+
+
+
+
+
