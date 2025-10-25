@@ -1,54 +1,53 @@
 :root {
     /* Variables CSS */
-      --color-verde: #38a54c; 
-      --color-rojo: #fd0625;
-      /* paleta robada de tailwind, seccion colores: 
-      https://tailwindcss.com/docs/colors*/
-      --color-azul: oklch(62.3% 0.214 259.815);
-    }
-    
-body{
-    /* Quitar estilos por defecto del navegador */
+    /* color robado de tailwind, seccion colores: 
+    --color-azul: oklch(62.3% 0.214 259.815);
+    https://tailwindcss.com/docs/colors
+    */
+  
+    /* Azules */
+    --color-azul-4: rgb(45, 94, 252);    /* #2D5EFC */
+    --color-azul-3: rgb(45, 225, 252);   /* #2DE1FC */
+    --color-azul-2: rgb(45, 159, 252);   /* #2D9FFC */
+    --color-azul-1: rgb(129, 236, 252);  /* #81ECFC */
+  
+    /* Verdes */
+    --color-verde-2: rgb(45, 252, 142);  /* #2DFC8E */
+    --color-verde-1: rgb(45, 252, 211);  /* #2DFCD3 */
+  }
+
+body {
     margin: 0;
     padding: 0;
-}
-
-body{
-    background-color: var(--color-azul);
-}
-    
-.logo-game-stop{
-    width: 125px;
-    height: 75px;
-}
-
-.texto-blanco{
-    color: white;
-} 
-
-
-nav h2{
-    padding: 0;
-    margin: 0;
-}
+  }
 
 main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    background-image: url("../src/background-image.png"); 
+    height: 100vh; 
+    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+    background-repeat: repeat; 
+    background-size: 300px;
+    background-color: var(--color-azul-1);
+  }
+  
 
-nav{
+header{
     background-color: oklch(42.4% 0.199 265.638);    
-}
-
-.parte-superior-nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0vh 5vh;
-
 }
+
+.logo-game-stop{
+  width: 125px;
+  height: 75px;
+}
+
+.texto-blanco{
+  color: white;
+} 
+
 
 /* 
     =======================================
@@ -56,12 +55,11 @@ nav{
 =======================================
 */
 
-.parte-inferior-nav {
-
+.sticky-nav {
   padding: 10px 5vh;
 }
 
-.parte-inferior-nav ul {
+.sticky-nav ul {
   display: flex;
   justify-content: center; /* centra los elementos */
   gap: 30px; /* separa los items de forma pareja */
@@ -71,23 +69,51 @@ nav{
   margin: 0;
 }
 
-.parte-inferior-nav a {
+.sticky-nav a {
   text-decoration: none;
   color: white; /* más contraste sobre el fondo rojo */
-  background-color: var(--color-rojo);
+  background-color: #c9041d;
   padding: 8px 16px;
   border-radius: 6px; /* bordes redondeados, más moderno */
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* transition: background-color 0.3s ease, transform 0.2s ease; */
 }
 
 /* Efecto hover bonito */
-.parte-inferior-nav a:hover {
+.sticky-nav a:hover {
   background-color: #c9041d; /* rojo más oscuro */
   transform: scale(1.05);
 }
 
+.sticky-nav {
+  background-color: oklch(42.4% 0.199 265.638);
+  position: sticky;
+  top: 0; /* se pega al top */
+  z-index: 100;
+}
 
+.content-conteiner{
+  background-color: var(--color-azul-2);
+  margin: 3vw;
+  padding: 5vw;
+}
 
+.content-conteiner {
+  /* width: 80%; */
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  
+  /* Borde */
+  border: 4px solid var(--color-azul-4); /* usando tu variable de color */
+  border-radius: 20px; /* esquinas redondeadas */
 
+  /* Efecto de "doblado" en esquinas */
+  box-shadow: 
+    6px 6px 0px var(--color-azul-2),  
+    /* sombra diagonal para simular doblez */
+
+    0px 0px 0px var(--color-azul-3); 
+    /* sombra opuesta para contraste */
+}
 
 
