@@ -1,67 +1,114 @@
+    /*==========================================
+      Variables de estilo globales.
+==========================================*/
 :root {
-    /* Variables CSS */
-    /* color robado de tailwind, seccion colores: 
-    --color-azul: oklch(62.3% 0.214 259.815);
-    https://tailwindcss.com/docs/colors
-    */
-  
     /* Azules */
-    --color-azul-4: rgb(45, 94, 252);    /* #2D5EFC */
-    --color-azul-3: rgb(45, 225, 252);   /* #2DE1FC */
-    --color-azul-2: rgb(45, 159, 252);   /* #2D9FFC */
-    --color-azul-1: rgb(129, 236, 252);  /* #81ECFC */
-  
-    /* Verdes */
-    --color-verde-2: rgb(45, 252, 142);  /* #2DFC8E */
-    --color-verde-1: rgb(45, 252, 211);  /* #2DFCD3 */
-  }
+    --color-azul-6: oklch(42.4% 0.199 265.638);
+    --color-azul-5: #0060d6;
+    --color-azul-4: #0097f6;
+    --color-azul-3: #00d6ff; 
+    --color-azul-2: #84ffff; 
+    --color-azul-1: #e8ffff; 
 
-body {
-    margin: 0;
-    padding: 0;
-  }
 
-main{
-    background-image: url("../src/background-image.png"); 
-    height: 100vh; 
-    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
-    background-repeat: repeat; 
-    background-size: 300px;
-    background-color: var(--color-azul-1);
-  }
-  
+    /* Colores de letras */
 
-header{
-    background-color: oklch(42.4% 0.199 265.638);    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0vh 5vh;
+    --color-negro-1: #212322;
+    --color-rojo-1: #ee2a28;
+        
+      }
+
+      /*==========================================
+      Clases reutilizables.
+==========================================*/
+.texto-negro{
+  color: var(--color-negro-1);
 }
-
-.logo-game-stop{
-  width: 125px;
-  height: 75px;
+.texto-rojo{
+  color: var(--color-rojo-1);
 }
-
 .texto-blanco{
   color: white;
 } 
 
+.main-content-container {
+  background-color: var(--color-azul-4);
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 3rem;
+  border-radius: 20px;
 
-/* 
-    =======================================
-    dsp cambio los siguientes estilos: 
-=======================================
-*/
+  /* Sombras más visibles y suaves */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  /* Efecto de borde sutil */
+  border: 3px solid var(--color-azul-5);
+
+  /* Transición suave al pasar el mouse */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-content-container:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+
+    /*==========================================
+      Estilo general inicial.
+==========================================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif; 
+    /* En principio fuente global */
+    font-weight: 700;    
+    /*Cambiar el peso, de ser necesario*/
+  }
+
+main{
+      background-image: url("../src/background-image.png"); 
+      height: 100vh; 
+      background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+      background-repeat: repeat; 
+      background-size: 375px;
+      background-color: var(--color-azul-3);   
+    }
+
+.logo-game-stop {
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+    margin: 20px;
+  }
+
+    /*==========================================
+      Estilo del header y el nav.
+==========================================*/
+  
+
+header{
+    background-color: var(--color-azul-6);    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vh 5vh;
+  }
+  
 
 .sticky-nav {
   padding: 10px 5vh;
+  background-color: var(--color-azul-6);
+  position: sticky;
+  top: 0; /* se pega al top */
+  z-index: 100;
 }
 
 .sticky-nav ul {
   display: flex;
-  justify-content: center; /* centra los elementos */
+  justify-content: space-around; /* centra los elementos */
   gap: 30px; /* separa los items de forma pareja */
   align-items: center;
   list-style: none;
@@ -70,50 +117,24 @@ header{
 }
 
 .sticky-nav a {
+  font-weight: 500;  
   text-decoration: none;
-  color: white; /* más contraste sobre el fondo rojo */
-  background-color: #c9041d;
+  background-color: var(--color-rojo-1);
   padding: 8px 16px;
-  border-radius: 6px; /* bordes redondeados, más moderno */
+  border-radius: 6px; 
+  /* bordes redondeados, más moderno */
   /* transition: background-color 0.3s ease, transform 0.2s ease; */
 }
 
-/* Efecto hover bonito */
 .sticky-nav a:hover {
   background-color: #c9041d; /* rojo más oscuro */
   transform: scale(1.05);
 }
 
-.sticky-nav {
-  background-color: oklch(42.4% 0.199 265.638);
-  position: sticky;
-  top: 0; /* se pega al top */
-  z-index: 100;
-}
 
-.content-conteiner{
-  background-color: var(--color-azul-2);
-  margin: 3vw;
-  padding: 5vw;
-}
 
-.content-conteiner {
-  /* width: 80%; */
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
   
-  /* Borde */
-  border: 4px solid var(--color-azul-4); /* usando tu variable de color */
-  border-radius: 20px; /* esquinas redondeadas */
 
-  /* Efecto de "doblado" en esquinas */
-  box-shadow: 
-    6px 6px 0px var(--color-azul-2),  
-    /* sombra diagonal para simular doblez */
 
-    0px 0px 0px var(--color-azul-3); 
-    /* sombra opuesta para contraste */
-}
 
 
