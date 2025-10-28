@@ -33,7 +33,7 @@
 
 .main-content-container {
   background-color: var(--color-azul-4);
-  max-width: 800px;
+
   margin: 3rem auto;
   padding: 3rem;
   border-radius: 20px;
@@ -68,12 +68,12 @@ body {
   }
 
 main{
-      background-image: url("../src/background-image.png"); 
-      height: 100vh; 
-      background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
-      background-repeat: repeat; 
-      background-size: 375px;
-      background-color: var(--color-azul-3);   
+    background-image: url("../src/background-image.png"); 
+    height: 100vh; 
+    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+    background-repeat: repeat; 
+    background-size: 375px;
+    background-color: var(--color-azul-3);   
     }
 
 .logo-game-stop {
@@ -92,29 +92,40 @@ main{
 header{
     background-color: var(--color-azul-6);    
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0vh 5vh;
+
+    border-left: 3px solid var(--color-azul-5);
+    border-right: 3px solid var(--color-azul-5);
   }
   
 
-.sticky-nav {
-  padding: 10px 5vh;
-  background-color: var(--color-azul-6);
-  position: sticky;
-  top: 0; /* se pega al top */
-  z-index: 100;
+.sticky-nav {    
+    padding: 1px 1px;
+    background-color: var(--color-azul-6);
+    position: sticky;
+    top: 0; /* se pega al top */
+    z-index: 100;
+
+    border-left: 3px solid var(--color-azul-5);
+    border-right: 3px solid var(--color-azul-5);
+    border-bottom:  3px solid var(--color-azul-5);
+    
 }
 
 .sticky-nav ul {
-  display: flex;
-  justify-content: space-around; /* centra los elementos */
-  gap: 30px; /* separa los items de forma pareja */
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    margin: 7;
+    padding: 0;
+    list-style: none; /* ✅ quita los puntos */
+    display: flex;
+    flex-wrap: wrap; /* 👉 permite que los links bajen de línea */
+    justify-content: space-evenly;
+
+    gap: 15px;
 }
+
 
 .sticky-nav a {
   font-weight: 500;  
@@ -122,18 +133,30 @@ header{
   background-color: var(--color-rojo-1);
   padding: 8px 16px;
   border-radius: 6px; 
-  /* bordes redondeados, más moderno */
-  /* transition: background-color 0.3s ease, transform 0.2s ease; */
+  border: 2px solid #bb1d1a;
+
+  display: inline-block; /* asegura que respeten márgenes y padding */
+  white-space: nowrap; /* evita que el texto colapse o se corte */
 }
+
 
 .sticky-nav a:hover {
-  background-color: #c9041d; /* rojo más oscuro */
-  transform: scale(1.05);
+    background-color: #c9041d; /* rojo más oscuro */
+    transform: scale(1.05);
+}
+
+.selected-anchor {
+  border-color: #bb1d1a;
+  font-weight: 600;
+  color: white;
 }
 
 
+ /* 
+ A considerar para hacer responsible en ds moviles:
 
-  
+ buscar que el logo quede centrado y que el nav quede dentro de un desplegable
+ */
 
 
 
