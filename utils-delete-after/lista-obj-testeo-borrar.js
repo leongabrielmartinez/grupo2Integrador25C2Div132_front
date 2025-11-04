@@ -1,5 +1,6 @@
 //Dsp se traen los datos del back-end, pero sirve para un diseño inicial del front-end.
 
+
 let gamingItems = [
   { 
     id: 1, 
