@@ -1,28 +1,9 @@
-/*===============================
-    CONFIGURACIONES GENERALES
-================================*/
-
-
-
-
-
-/*==========
-    HEADER
-===========*/
-
-
-/*===========
-    MAIN
-===========*/
-
 main {
     display: flex;
     flex-direction: column;
 }
 
-/*-----------------------
-    SECCION PRODUCTOS
------------------------*/
+/* PRODUCTOS*/
 
 .productos {
     background-color: var(--color-fondo-productos);
@@ -37,7 +18,6 @@ main {
 }
 
 
-/* contenedor de frutas y sus trajetas*/
 #contenedorProductos {
     display: flex;
     flex-wrap: wrap;
@@ -69,36 +49,17 @@ main {
     margin-bottom: 3px;
 }
 
-/* .bloque-item {  */
-    
-    /* list-style: none; quita los puntitos */
-    /* display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-} */
-
-
-/*===========
-    FOOTER
-===========*/
 
 
 
-/*=============
-    GENERALES
-=============*/
-
-/*-------------------
-    MAIN y FOOTER
-/* --------------------*/
-main, footer {
-    padding: 10px;
-} */
 
 
-/*---------------
-    BOTONES
-----------------*/
+
+
+
+
+/* BOTONES */
+
 
 
 
@@ -107,7 +68,7 @@ button {
 }
 
 button:hover {
-    opacity: 0.8; /* efecto sutil de transparencia */
+    opacity: 0.8;
     cursor: pointer;
-    transform: scale(1.03); /* los agranda un poquito */
+    transform: scale(1.03);
 }
