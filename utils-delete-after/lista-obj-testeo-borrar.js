@@ -1,12 +1,12 @@
 //Dsp se traen los datos del back-end, pero sirve para un diseño inicial del front-end.
 
+
 let gamingItems = [
   { 
     id: 1, 
     nombre: "Resident Evil 4 (2023)", 
     precio: 50, 
     estudio: "Capcom", 
-    generos: ["Acción", "Terror", "Aventura"], 
     descripcion: "Resident Evil 4 (2023) es una reimaginación del clásico juego de terror y acción que revolucionó el género. En esta versión moderna, se mantiene la esencia del original pero con mejoras visuales impresionantes, una jugabilidad más fluida y un enfoque cinematográfico en cada enfrentamiento. Controlas a Leon S. Kennedy en una misión peligrosa para rescatar a la hija del presidente en un remoto pueblo europeo lleno de enemigos infectados. El juego combina exploración, combate táctico y una atmósfera constante de tensión. Además, incluye nuevas mecánicas, un diseño de sonido inmersivo y escenarios rediseñados que hacen que la experiencia sea tan nostálgica como desafiante para los nuevos jugadores.", 
     ruta_img: "" 
   },
@@ -14,8 +14,7 @@ let gamingItems = [
     id: 2, 
     nombre: "Street Fighter 5", 
     precio: 100, 
-    estudio: "Capcom", 
-    generos: ["Lucha", "Competitivo"], 
+    estudio: "Capcom",  
     descripcion: "Street Fighter 5 continúa la legendaria saga de peleas con un enfoque renovado en la estrategia, la técnica y la competencia online. Con un estilo visual vibrante y animaciones fluidas, cada personaje ofrece un conjunto único de movimientos y habilidades que requieren precisión y práctica. El juego se centra en la lucha uno contra uno, pero también presenta modos de entrenamiento, historia y eventos en línea. Con actualizaciones constantes y una comunidad activa, Street Fighter 5 se ha consolidado como uno de los pilares de los esports de lucha, ofreciendo tanto profundidad técnica para veteranos como accesibilidad para nuevos jugadores que buscan aprender y mejorar en el arte del combate.", 
     ruta_img: "" 
   },
@@ -23,8 +22,7 @@ let gamingItems = [
     id: 3, 
     nombre: "Hollow Knight", 
     precio: 200, 
-    estudio: "Team Cherry", 
-    generos: ["Metroidvania", "Acción", "Aventura"], 
+    estudio: "Team Cherry",  
     descripcion: "Hollow Knight es una aventura de acción en 2D que combina exploración profunda, combate desafiante y una atmósfera melancólica en el misterioso reino de Hallownest. Controlas a un pequeño caballero en busca de respuestas sobre una civilización perdida, mientras enfrentas criaturas extrañas y descubres secretos ocultos bajo tierra. Su estilo artístico hecho a mano y su banda sonora evocadora crean una experiencia inmersiva que premia la curiosidad y la paciencia. Cada zona del juego ofrece nuevos enemigos, habilidades y rutas interconectadas, recordando a los clásicos Metroidvania, pero con una identidad única que ha convertido a Hollow Knight en un referente del género indie moderno.", 
     ruta_img: "" 
   },
