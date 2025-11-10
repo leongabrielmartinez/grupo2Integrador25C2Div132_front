@@ -1,116 +1,113 @@
-/* analizar distribucion del main, para cada caso */
+/*===============================
+    CONFIGURACIONES GENERALES
+================================*/
 
-main{
+
+
+
+
+/*==========
+    HEADER
+===========*/
+
+
+/*===========
+    MAIN
+===========*/
+
+main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-}
+/*-----------------------
+    SECCION PRODUCTOS
+-----------------------*/
 
-nav{
-    padding-left: 10px;
-    padding-right: 10px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #38a54c;
-    color: #fffced;
-}
-
-.busqueda{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.seccionProductos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-div button {
-    height: 35px;
-    background-color: #38a54c;
-    color: #fffced;
-    border: 2px;
+.productos {
+    background-color: var(--color-fondo-productos);
     border-radius: 10px;
 }
 
-.card-producto img{
-    max-width: 50px;
-    max-height: 50px;
-}
-.card-producto button{
-    height: 35px;
-    background-color: #38a54c;
-    color: #fffced;
-    border: 2px;
-    border-radius: 10px;
-}
-
-.card-producto{
-    width: 200px;
-    height: 220px;
-    padding: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.encabezado-productos {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
 }
 
-#contenedorProductos{
-    /* height: 600px; */
-    max-width: 80%;
+
+/* contenedor de frutas y sus trajetas*/
+#contenedorProductos {
     display: flex;
-    gap: 5px;
-    /* border: 2px solid; */
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 10px;
+    padding: 20px;
 }
 
-#contenedorCarrito{
-    width: 100%;
-    /* margin: auto; */
+.card-producto {
+    width: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* border: 2px solid; */
-
-}
-#contenedorCarrito button{
-    background-color: #f90022;
-    height: 35px;
-    color: #fffced;
-    border: 2px;
-    border-radius: 10px;
-}
-
-#contenedorCarrito li{
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
 
-.abajoCarrito{
-    /* padding-left: 10px;
-    padding-right: 10px; */
-
-    width: 98%;
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    /* border: 2px solid; */
+/* imágenes */
+.card-producto img {
+    width: 80px;
+    height: 80px;
 }
-/* analizar distribucion del main, para cada caso */
 
+.card-producto h2,
+.card-producto p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+/* .bloque-item {  */
+    
+    /* list-style: none; quita los puntitos */
+    /* display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+} */
+
+
+/*===========
+    FOOTER
+===========*/
+
+
+
+/*=============
+    GENERALES
+=============*/
+
+/*-------------------
+    MAIN y FOOTER
+/* --------------------*/
+main, footer {
+    padding: 10px;
+} */
+
+
+/*---------------
+    BOTONES
+----------------*/
+
+
+
+button {
+    height: 30px;
+}
+
+button:hover {
+    opacity: 0.8; /* efecto sutil de transparencia */
+    cursor: pointer;
+    transform: scale(1.03); /* los agranda un poquito */
+}
