@@ -77,12 +77,15 @@ function mostrarProductos(productos) {
                   <h3>${item.nombre}</h3>
                   <p>$ ${item.precio}</p>
                   <button onclick="agregarACarrito(${item.id})">Agregar al carrito</button>
+                  <button onclick="verDetalles(${item.id})">Ver detalles</button>
               </div> `;
     });
     contenedorProductos.innerHTML = cartaProducto;
 }
 
-
+function verDetalles(id){
+  console.log(`Redirige a detalles del producto ${id}`);
+}
 
 // #region revisar filtrar
 // agrega un event listener para cuando se levanta una tecla del teclado
