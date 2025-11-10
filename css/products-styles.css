@@ -50,18 +50,7 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
 /* BOTONES */
-
-
-
 
 button {
     height: 30px;
@@ -71,4 +60,29 @@ button:hover {
     opacity: 0.8;
     cursor: pointer;
     transform: scale(1.03);
+}
+
+/* BUSQUEDA */
+
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content:center; */
+    /* align-items: center; */
+}
+
+.busqueda-categorias{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* Los botones tienen que tener mismo diseño en todos lados, no se modifican aca */
+}
+
+.busqueda-nombre{
+
+}
+
+.busqueda-paginacion{
+    
 }
