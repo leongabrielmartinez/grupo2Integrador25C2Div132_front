@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="css/global-styles.css" />
       <link rel="stylesheet" href="css/index-styles.css" />
-      <script src="js/global-scripts.js" defer></script>
+      <script src="js/global-scripts.js"></script>
       <script src="js/index-scripts.js" defer></script>
       <title>Gaming shop</title>
       <link rel="icon" type="image/png" href="src/favicon-96x96.png" />
@@ -13,16 +13,17 @@
   </head>
 
   <body>
-
     <header>
         <h1><span class="texto-negro">GAMING</span> <span class="texto-rojo">SHOP</span></h1>
-        <img class="logo-game-stop" src="src/favicon.svg" alt="logo">
-        <h3><span class="texto-negro">Leon Martinez</span><span class="texto-blanco"> | </span><span class="texto-rojo">Daniel Ceriana</span></h3>      
+        <div class="logo-game-shop">
+          <img class="logo-game-stop" src="src/favicon.svg" alt="logo">
+        </div>
+        <h3><span class="texto-negro">Leon Martinez</span><span class="color-borde"> | </span><span class="texto-rojo">Daniel Ceriana</span></h3>      
     </header>
 
     <nav class="sticky-nav">
  
-      <ul>
+      <ul id="nav-list">
         <li>
           <a href="index.html" class="selected-anchor">Pantalla de inicio</a>
         </li>
@@ -36,16 +37,38 @@
           <a href="sales.html" class="texto-negro">Facturación y tickets</a>
         </li>
       </ul>
-
-   </nav>
+      <ion-icon id="menu-toggle" size="large" name="chevron-down-outline"></ion-icon>
+    </nav>
 
     <main>
         <div class="main-content-container">
 
+            <ion-icon class="toggle-button" id="theme-toggle" size="large" name="moon-outline"></ion-icon>
             <p>Branch merge needed!</p>
 
         </div>
     </main>     
 
   </body>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    // Comportamiento del desplegable
+      document.addEventListener("DOMContentLoaded", () => {
+          const toggle = document.getElementById("menu-toggle");
+          const navList = document.getElementById("nav-list");
+
+          toggle.addEventListener("click", () => {
+              console.log("Clicked");
+              navList.classList.toggle("active");
+
+              if (navList.classList.contains("active")) {
+                  toggle.setAttribute("name", "chevron-up-outline");
+              } else {
+                  toggle.setAttribute("name", "chevron-down-outline");
+              }
+          });
+      });
+  </script>
+
 </html>
