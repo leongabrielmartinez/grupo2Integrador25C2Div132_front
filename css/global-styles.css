@@ -25,14 +25,13 @@
 
 /* MODO OSCURO */
 :root[data-theme="dark"] {
+    --color-celeste-1: #7EC6FF;
+    --color-celeste-2: #63B8FF;
+    --color-celeste-3: #4EAEFF;
 
-    --color-celeste-1: #1e6eaa;
-    --color-celeste-2: #1c6aa5;
-    --color-celeste-3: #1d71b1;
-    
-    --background-header-nav: #54565c;
-    --background-main: #54565c;
-    --background-main-conteiner: #6e727e;
+    --background-header-nav: #435663;        
+    --background-main: #435663;              
+    --background-main-conteiner: #A3B087;    
 }
 
       /*==========================================

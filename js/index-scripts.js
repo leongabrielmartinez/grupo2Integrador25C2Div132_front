@@ -10,7 +10,5 @@ function changeColorThemeAttribute(){
             themeBtn.setAttribute("name", "sunny-outline");          
     }}
 
-document.addEventListener("DOMContentLoaded", () => {
-    themeBtn.addEventListener("click", changeColorThemeAttribute);
-});
+themeBtn.addEventListener("click", changeColorThemeAttribute);
 

@@ -6,6 +6,7 @@
       <link rel="stylesheet" href="css/global-styles.css" />
       <link rel="stylesheet" href="css/shopping-cart-styles.css" />
       <script src="js/global-scripts.js"></script>
+      <script src="js/global-scripts-defer.js" defer></script>
       <script src="js/shopping-cart-scripts.js" defer></script>
       <title>Gaming shop</title>
       <link rel="icon" type="image/png" href="src/favicon-96x96.png" />
@@ -49,25 +50,4 @@
     </main>     
 
   </body>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script>
-    // Comportamiento del desplegable
-      document.addEventListener("DOMContentLoaded", () => {
-          const toggle = document.getElementById("menu-toggle");
-          const navList = document.getElementById("nav-list");
-
-          toggle.addEventListener("click", () => {
-              console.log("Clicked");
-              navList.classList.toggle("active");
-
-              if (navList.classList.contains("active")) {
-                  toggle.setAttribute("name", "chevron-up-outline");
-              } else {
-                  toggle.setAttribute("name", "chevron-down-outline");
-              }
-          });
-      });
-  </script>
-
 </html>
