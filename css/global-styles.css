@@ -25,6 +25,9 @@
 
 /* MODO OSCURO */
 :root[data-theme="dark"] {
+    /* En esta parte se esta referenciando a un valor de un atributo html (data-theme),
+    si este valor coincide con dark se aplican estas variables / cambios en los colores gernerales.
+     */
     --color-celeste-1: #7EC6FF;
     --color-celeste-2: #63B8FF;
     --color-celeste-3: #4EAEFF;
