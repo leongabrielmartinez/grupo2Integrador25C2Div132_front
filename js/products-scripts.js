@@ -127,6 +127,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 function recortarDescripcion(texto, max = 40) {
+
   if (texto.length > max) {
     return texto.substring(0, max) + "...";
   }
@@ -141,7 +142,7 @@ function mostrarProductos(productos) {
               <div class="card-producto">
                   <img src="${item.ruta_img}" alt="${item.nombre}" />
                   <h5>${item.nombre}</h3>
-                  <p class='card-descripcion'>${recortarDescripcion(item.descripcion,40)}</p>
+                  <p class='card-descripcion'>${recortarDescripcion(item.descripcion)}</p>
                   <p>$ ${item.precio}</p>
                   <button onclick="agregarACarrito(${item.id})">Agregar al carrito</button>
                   <button onclick="verDetalles(${item.id})">Ver detalles</button>
