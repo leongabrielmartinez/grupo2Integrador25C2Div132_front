@@ -65,7 +65,7 @@
         <section class="admin-login-form">
           <details>
             <summary>Abrir panel de administrador</summary>
-              <form class="admin-login-form">
+              <form class="admin-login-form" id="admin-form">
                 <fieldset class="fieldset-style">
                   <legend class="texto-azul">Panel de administrador</legend>
 
@@ -75,8 +75,8 @@
                   <label for="admin-password">Contraseña:</label>
                   <input placeholder="******" id="admin-password" type="password">
 
-                  <button type="submit" class="btn-send-form-generic-style">Continuar al backoffice</button>  
-                  <button type="submit" class="btn-send-form-generic-style">Auto completar datos</button>  
+                  <button id="btn-send-admin-form" type="submit" class="btn-send-form-generic-style">Continuar al backoffice</button>  
+                  <button id="btn-fill-out-form" type="submit" class="btn-send-form-generic-style">Auto completar datos</button>  
                 </fieldset>
               </form>
           </details>
@@ -85,7 +85,6 @@
       </div>
       
     </main>     
-
   </body>
 
 

@@ -13,7 +13,7 @@ function validateExistNameUser(){
     //lo primero que se abre es / y dsp se redirige automaticamente a index pero en este
     //proceso se dispara el alert, para evitar eso esta el and.
         if(!sessionStorage.getItem('userName')){
-            alert("ingrese un nombre");
+            alert("Debe completar el formulario para usuarios, para poder navegar en la aplicación");
             location.replace('index.html')
         }}
 }
