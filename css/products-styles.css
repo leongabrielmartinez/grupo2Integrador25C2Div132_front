@@ -37,6 +37,15 @@ main {
     box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
 
+.card-descripcion{
+    font-size: 0.6rem;
+    max-width: 100%;
+    max-height: 23px;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
 /* imágenes */
 .card-producto img {
     width: 80px;

@@ -126,6 +126,13 @@ const contenedorProductos = document.querySelector("#contenedorProductos");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
+function recortarDescripcion(texto, max = 40) {
+  if (texto.length > max) {
+    return texto.substring(0, max) + "...";
+  }
+  return texto;
+}
+
 function mostrarProductos(productos) {
     //declara un auxiliar para despues reemplazar en el html
     let cartaProducto = "";
@@ -133,7 +140,8 @@ function mostrarProductos(productos) {
         cartaProducto += `
               <div class="card-producto">
                   <img src="${item.ruta_img}" alt="${item.nombre}" />
-                  <h3>${item.nombre}</h3>
+                  <h5>${item.nombre}</h3>
+                  <p class='card-descripcion'>${recortarDescripcion(item.descripcion,40)}</p>
                   <p>$ ${item.precio}</p>
                   <button onclick="agregarACarrito(${item.id})">Agregar al carrito</button>
                   <button onclick="verDetalles(${item.id})">Ver detalles</button>
