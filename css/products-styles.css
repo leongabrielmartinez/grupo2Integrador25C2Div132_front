@@ -70,6 +70,16 @@ button:hover {
     cursor: pointer;
     transform: scale(1.03);
 }
+.btn-generico{
+    background-color: var(--color-rojo-1);
+    font-family: 'Orbitron', sans-serif; 
+    font-weight: 100;
+    border-radius: 6px; 
+    border: 2px solid var(--color-bordes-1);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: var(--color-negro-1);
+}
 
 /* BUSQUEDA */
 
@@ -88,10 +98,21 @@ button:hover {
     /* Los botones tienen que tener mismo diseño en todos lados, no se modifican aca */
 }
 
+
 .busqueda-nombre{
 
 }
 
 .busqueda-paginacion{
     
+}
+
+.busqueda button {    
+    font-size: 0.97rem;
+    background-color: var(--color-celeste-1);
+    border-radius: 6px; 
+    border: 2px solid var(--color-bordes-1);
+  
+    /* display: inline-block;  */
+    /* white-space: nowrap;  */
 }
