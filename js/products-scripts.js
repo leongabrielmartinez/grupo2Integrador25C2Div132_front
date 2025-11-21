@@ -179,12 +179,26 @@ function verDetalles(id){
 //lo demas de su crud, esta en el apartado del carrito
 
 
+
 function agregarACarrito(id) {
-    let itemSeleccionado = productos.find(f => f.id === id);
-    carrito.push(itemSeleccionado);
-    actualizarLocalStorage();
+  let itemSeleccionado = productos.find(f => f.id === id);
+  verificarExistenciaEnCarrito(itemSeleccionado);
+  actualizarLocalStorage();
 }
 
+function verificarExistenciaEnCarrito(item){
+  let existe = false;
+  carrito.forEach(carritoItem=>{
+    if(carritoItem.id == item.id){
+      carritoItem.cantidad++;
+      existe= true;
+    }
+  })
+  if(!existe){
+    item.cantidad = 1;
+    carrito.push(item);
+  }
+}
 
 
 //(por lo general no pongo tildes porque queda incomodo en el teclado pero aca quedaba raro sino)
