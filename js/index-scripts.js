@@ -69,14 +69,29 @@ adminForm.addEventListener('submit', function (e) {
   if(btnUsedToSend.id === "btn-fill-out-form"){
     adminGmail = "admin@gmail.com"
     adminPassword = "123456"
+
+    //enviar petición...
   }
 
-  if(btnUsedToSend === "btn-send-admin-form"){
-    //Validaciones
-  }
 
-  //Luego en ambos casos se enviaria una peticion al back, para validar al admin y dar acceso 
-  //al back office
+  if (btnUsedToSend.id === "btn-send-admin-form") {
+    // Validar que termine con @gmail.com
+    if (!adminGmail.endsWith("@gmail.com")) {
+      alert("El email debe terminar en: @gmail.com");
+      return;
+    }
+    // Validar que termine con @gmail.com
+
+    // Validar contraseña mínima de 7 caracteres
+    if (adminPassword.length < 6) {
+      alert("La contraseña debe tener al menos 6 caracteres.");
+      return;
+    }
+    // Validar contraseña mínima de 7 caracteres
+
+    alert("se completaron las validaciones");
+    //enviar petición...
+  }
 
 }); 
 
