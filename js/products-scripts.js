@@ -144,9 +144,9 @@ function mostrarProductos(productos) {
                   <h5>${item.nombre}</h3>
                   <p class='card-descripcion'>${recortarDescripcion(item.descripcion)}</p>
                   <p>$ ${item.precio}</p>
-                  <button class='btn-generico' onclick="agregarACarrito(${item.id})">Agregar al carrito</button>
-                  <button class='btn-generico' onclick="verDetalles(${item.id})">Ver detalles</button>
-              </div> `;
+                  <button class='btn-generico' onclick="agregarACarrito(${item.id})">Agregar al carrito</button>`+
+                  // <button class='btn-generico' onclick="verDetalles(${item.id})">Ver detalles</button>
+              `</div> `;
     });
     contenedorProductos.innerHTML = cartaProducto;
 }
