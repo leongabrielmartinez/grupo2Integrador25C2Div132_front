@@ -1,10 +1,118 @@
-/* analizar distribucion del main, para cada caso */
-
-main{
+main {
     display: flex;
     flex-direction: column;
+}
+
+/* PRODUCTOS*/
+
+.productos {
+    background-color: var(--color-fondo-productos);
+    border-radius: 10px;
+}
+
+.encabezado-productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-/* analizar distribucion del main, para cada caso */
 
+#contenedorProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 20px;
+}
+
+.card-producto {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.card-descripcion{
+    font-size: 0.6rem;
+    max-width: 100%;
+    max-height: 23px;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
+/* imágenes */
+.card-producto img {
+    width: 80px;
+    height: 80px;
+}
+
+.card-producto h2,
+.card-producto p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+
+/* BOTONES */
+
+button {
+    height: 30px;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.btn-generico{
+    background-color: var(--color-rojo-1);
+    font-family: 'Orbitron', sans-serif; 
+    font-weight: 100;
+    border-radius: 6px; 
+    border: 2px solid var(--color-bordes-1);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: var(--color-negro-1);
+}
+
+/* BUSQUEDA */
+
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content:center; */
+    /* align-items: center; */
+}
+
+.busqueda-categorias{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* Los botones tienen que tener mismo diseño en todos lados, no se modifican aca */
+}
+
+
+.busqueda-nombre{
+
+}
+
+.busqueda-paginacion{
+    
+}
+
+.busqueda button {    
+    font-size: 0.97rem;
+    background-color: var(--color-celeste-1);
+    border-radius: 6px; 
+    border: 2px solid var(--color-bordes-1);
+  
+    /* display: inline-block;  */
+    /* white-space: nowrap;  */
+}
