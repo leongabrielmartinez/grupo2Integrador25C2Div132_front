@@ -2,56 +2,79 @@
       Variables de estilo globales.
 ==========================================*/
 :root {
-    /* Azules */
-    --color-azul-6: oklch(42.4% 0.199 265.638);
-    --color-azul-5: #0060d6;
-    --color-azul-4: #0097f6;
-    --color-azul-3: #00d6ff; 
-    --color-azul-2: #84ffff; 
-    --color-azul-1: #e8ffff; 
-
-
     /* Colores de letras */
+    --color-negro-1: #212322;            
 
-    --color-negro-1: #212322;
-    --color-rojo-1: #ee2a28;
-        
-      }
+    /* Colores reutilizables */
+    --color-rojo-1: #ef4565;
+    --color-rojo-2: #bb1d1a;
+    --color-rojo-3: #c9041d; 
+    
+    --color-celeste-1: #3da9fc;
+    --color-celeste-2: #269df8;
+    --color-celeste-3: #1596f8;
+    
+    --color-bordes-1: #094067;
+    --color-parrafos-1: #5f6c7b;
+
+    /* Config globales  */
+    --background-header-nav: #d5ddee;
+    --background-main: #d5ddee;
+    --background-main-conteiner: #A3B5DC;
+}
+
+/* MODO OSCURO */
+:root[data-theme="dark"] {
+    /* En esta parte se esta referenciando a un valor de un atributo html (data-theme),
+    si este valor coincide con dark se aplican estas variables / cambios en los colores gernerales.
+     */
+    --color-celeste-1: #7EC6FF;
+    --color-celeste-2: #63B8FF;
+    --color-celeste-3: #4EAEFF;
+
+    --background-header-nav: #435663;        
+    --background-main: #435663;              
+    --background-main-conteiner: #A3B087;    
+}
 
       /*==========================================
       Clases reutilizables.
 ==========================================*/
 .texto-negro{
-  color: var(--color-negro-1);
+    color: var(--color-negro-1);
 }
 .texto-rojo{
-  color: var(--color-rojo-1);
+    color: var(--color-rojo-1);
 }
 .texto-blanco{
-  color: white;
+    color: white;
 } 
 
+.color-borde{
+    color: var(--color-bordes-1);
+}
+
 .main-content-container {
-  background-color: var(--color-azul-4);
+    background-color: var(--background-main-conteiner);
 
-  margin: 3rem auto;
-  padding: 3rem;
-  border-radius: 20px;
+    margin: 3rem auto;
+    padding: 3rem;
+    border-radius: 20px;
 
-  /* Sombras más visibles y suaves */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Sombras más visibles y suaves */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
-  /* Efecto de borde sutil */
-  border: 3px solid var(--color-azul-5);
+    /* Efecto de borde sutil */
+    border: 3px solid var(--color-celeste-3);
 
-  /* Transición suave al pasar el mouse */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Transición suave al pasar el mouse */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .main-content-container:hover {
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  
 }
-
 
 
     /*==========================================
@@ -68,12 +91,10 @@ body {
   }
 
 main{
-    background-image: url("../src/background-image.png"); 
-    height: 100vh; 
-    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
-    background-repeat: repeat; 
-    background-size: 375px;
-    background-color: var(--color-azul-3);   
+    background-color: var(--background-main);  
+    margin: 0 10px;
+    border-left: 3px solid var(--color-bordes-1);
+    border-right: 3px solid var(--color-bordes-1); 
     }
 
 .logo-game-stop {
@@ -84,34 +105,45 @@ main{
     margin: 20px;
   }
 
+/* Ocultar boton desplegable */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
     /*==========================================
       Estilo del header y el nav.
 ==========================================*/
   
 
 header{
-    background-color: var(--color-azul-6);    
+    background-color: var(--background-header-nav);    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0vh 5vh;
+    margin: 0 10px;
+    border-left: 3px solid var(--color-bordes-1);
+    border-right: 3px solid var(--color-bordes-1);
 
-    border-left: 3px solid var(--color-azul-5);
-    border-right: 3px solid var(--color-azul-5);
   }
   
 
 .sticky-nav {    
     padding: 1px 1px;
-    background-color: var(--color-azul-6);
+    margin: 0 10px;
+
+    background-color: var(--background-header-nav);
     position: sticky;
     top: 0; /* se pega al top */
     z-index: 100;
 
-    border-left: 3px solid var(--color-azul-5);
-    border-right: 3px solid var(--color-azul-5);
-    border-bottom:  3px solid var(--color-azul-5);
+    border-left: 3px solid var(--color-bordes-1);
+    border-right: 3px solid var(--color-bordes-1);
+    border-bottom:  3px solid var(--color-bordes-1);
     
 }
 
@@ -130,10 +162,10 @@ header{
 .sticky-nav a {
   font-weight: 500;  
   text-decoration: none;
-  background-color: var(--color-rojo-1);
+  background-color: var(--color-celeste-1);
   padding: 8px 16px;
   border-radius: 6px; 
-  border: 2px solid #bb1d1a;
+  border: 2px solid var(--color-bordes-1);
 
   display: inline-block; /* asegura que respeten márgenes y padding */
   white-space: nowrap; /* evita que el texto colapse o se corte */
@@ -141,14 +173,14 @@ header{
 
 
 .sticky-nav a:hover {
-    background-color: #c9041d; /* rojo más oscuro */
+    background-color: var(--color-celeste-3);
     transform: scale(1.05);
 }
 
 .selected-anchor {
-  border-color: #bb1d1a;
-  font-weight: 600;
-  color: white;
+    border-color: var(--color-celeste-2);
+    font-weight: 600;
+    color: white;
 }
 
 
@@ -157,7 +189,70 @@ header{
 
  buscar que el logo quede centrado y que el nav quede dentro de un desplegable
  */
+      /*==========================================
+      Responsibe mobile.
+==========================================*/
+@media (max-width: 700px) {
+    main {
+        margin: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    
+    header{
+        margin: 0;
+        border-left: 3px solid var(--color-bordes-1);
+        border-right: 3px solid var(--color-bordes-1);
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+    h1{
+        margin: 10px;
+    }
+    h3{
+        margin: 10px;
+    }
 
+    main{
+        margin: 0;
+        border-left: 3px solid var(--color-bordes-1);
+        border-right: 3px solid var(--color-bordes-1); 
+    }
+
+    .logo-game-stop {
+        margin: 5px;
+    }
+
+    .sticky-nav {
+        margin: 0;
+        border-left: 3px solid var(--color-bordes-1);
+        border-right: 3px solid var(--color-bordes-1); 
+    }
+
+
+
+    /* Comportamiento del desplegable */
+    
+    /* Mostrar icono */
+    #menu-toggle {
+        display: block;
+    }
+
+    /* Ocultar menú por defecto */
+    .sticky-nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    /* Mostrar menú cuando esté activo */
+    .sticky-nav ul.active {
+        display: flex;
+    }
+}
 
 
 

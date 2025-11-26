@@ -5,24 +5,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="css/global-styles.css" />
       <link rel="stylesheet" href="css/products-styles.css" />
-      <script src="js/global-scripts.js" defer></script>
-      <script src="js/products-scritps.js" defer></script>
+      <script src="js/global-scripts.js"></script>
+      <script src="js/global-scripts-defer.js" defer></script>
+      <script src="js/products-scripts.js" defer></script>
       <title>Gaming shop</title>
       <link rel="icon" type="image/png" href="src/favicon-96x96.png" />
       <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
-
     <header>
         <h1><span class="texto-negro">GAMING</span> <span class="texto-rojo">SHOP</span></h1>
-        <img class="logo-game-stop" src="src/favicon.svg" alt="logo">
-        <h3><span class="texto-negro">Leon Martinez</span><span class="texto-blanco"> | </span><span class="texto-rojo">Daniel Ceriana</span></h3>      
+        <div class="logo-game-shop">
+          <img class="logo-game-stop" src="src/favicon.svg" alt="logo">
+        </div>
+        <h3><span class="texto-negro">Leon Martinez</span><span class="color-borde"> | </span><span class="texto-rojo">Daniel Ceriana</span></h3>      
     </header>
-    
+
     <nav class="sticky-nav">
  
-      <ul>
+      <ul id="nav-list">
         <li>
           <a href="index.html" class="texto-negro">Pantalla de inicio</a>
         </li>
@@ -36,13 +38,32 @@
           <a href="sales.html" class="texto-negro">Facturación y tickets</a>
         </li>
       </ul>
-
-   </nav>
+      <ion-icon id="menu-toggle" size="large" name="chevron-down-outline"></ion-icon>
+    </nav>
 
     <main>
         <div class="main-content-container">
+          <section class="busqueda">
+            <div class="busqueda-categorias">
+              <button type="button" id="btn-busqueda-juegos">Juegos</button>
+              <button type="button" id="btn-busqueda-consolas">Consolas</button>
+              <button type="button" id="btn-busqueda-todos">Todos</button>  
+            </div>
+            <div class="busqueda-nombre">
+              <label for="busqueda-nombre">Buscar por nombre:</label>
+              <input type="text" name="busqueda-nombre" id="busqueda-nombre" placeholder="PlayStation">
+            </div>
+            <div class="busqueda-paginacion">
+              <!-- Cargar la logica desde JS -->
+              <label for="paginacion">Pagina:</label>
+              <label for="paginacion-pagina">3/3</label>
+              <button type="button" disabled><</button>
+              <button type="button" disabled>></button>
 
-            <p>Branch merge needed!</p>
+            </div>
+
+          </section>
+          <section id="contenedorProductos"></section>
 
         </div>
     </main>     
