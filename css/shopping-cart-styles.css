@@ -8,3 +8,7 @@ main{
 
 /* analizar distribucion del main, para cada caso */
 
+.card-carrito img {
+    width: 80px;
+    height: 80px;
+}
