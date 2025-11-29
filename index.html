@@ -42,14 +42,40 @@
     </nav>
 
     <main>
-        <div class="main-content-container">
+      <div class="main-content-container">
 
-            <ion-icon class="toggle-button" id="theme-toggle" size="large" name="moon-outline"></ion-icon>
-            <p>Branch merge needed!</p>
+        <section class="user-name-form">
+          <form class="user-login-form" id="user-form">
+            <fieldset class="fieldset-style">
+              <legend class="texto-azul">Formulario para usuarios</legend>
+              
+              <label for="user-name">Ingresa tu nombre completo:</label>
+              <input placeholder="Jonh Pork" id="user-name" type="text">
 
-        </div>
+              <label for="theme-toggle">Selecciona el estilo de color:</label>              
+              <ion-icon class="toggle-theme-button" id="theme-toggle" size="large" name="moon-outline"></ion-icon>
+              
+              <button type="submit" class="btn-send-form-generic-style">Continuar a la tienda</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <hr>
+
+        <section class="admin-login-form">
+          <details>
+            <summary>Acceso para administradores</summary>
+                <fieldset class="fieldset-style">
+                  <legend class="texto-azul">Panel de administrador</legend>
+                  <a class="btn-redirect-back-office" href="http://localhost:3000/login">Redirigirse al back office <ion-icon class="arrow-redirect" name="arrow-forward-outline"></ion-icon></a>
+                </fieldset>
+              </form>
+          </details>
+        </section>
+
+      </div>
+      
     </main>     
-
   </body>
 
 
