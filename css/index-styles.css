@@ -19,12 +19,6 @@ main{
   gap: 0.7rem;
 }
 
-.admin-login-form fieldset {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  gap: 0.7rem;
-}
 
 
 .fieldset-style{
@@ -69,6 +63,8 @@ form input:focus {
     padding-top: 3px;
     padding-bottom: 3px;
     color: var(--color-negro-1);
+
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .toggle-theme-button{
@@ -77,4 +73,37 @@ form input:focus {
     cursor: pointer;     /* opcional pero recomendado */
     padding: 3px;
 
+}
+
+/* clase desordenada: */
+.btn-redirect-back-office{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--color-rojo-1);
+    font-family: 'Orbitron', sans-serif; 
+    font-weight: 100;
+    border-radius: 6px; 
+    border: 2px solid var(--color-bordes-1);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: var(--color-negro-1);
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.arrow-redirect{
+    font-size: 24px;
+}
+
+.btn-redirect-back-office:hover{
+    background-color: var(--color-rojo-2);
+    color: #f7f7f7;
+}
+.btn-send-form-generic-style:hover{
+    background-color: var(--color-rojo-2);
+    color: #f7f7f7;
 }

@@ -55,48 +55,5 @@ userForm.addEventListener('submit', function (e) {
 //#region Ejemplo region.
 // //#end region
 
-    /*==========================================
-      Formulario para administradores.
-==========================================*/
-let adminForm = document.getElementById("admin-form");
-
-adminForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const btnUsedToSend = e.submitter;
-
-  let adminGmail = document.getElementById('admin-email').value;
-  let adminPassword = document.getElementById('admin-password').value;
-  //A considerar:
-  //Las validaciones para formularios se pueden desactivar desde el inspector.
-
-  if(btnUsedToSend.id === "btn-fill-out-form"){
-    adminGmail = "admin@gmail.com"
-    adminPassword = "123456"
-
-    //enviar petición...
-  }
-
-
-  if (btnUsedToSend.id === "btn-send-admin-form") {
-    // Validar que termine con @gmail.com
-    if (!adminGmail.endsWith("@gmail.com")) {
-      alert("El email debe terminar en: @gmail.com");
-      return;
-    }
-    // Validar que termine con @gmail.com
-
-    // Validar contraseña mínima de 7 caracteres
-    if (adminPassword.length < 6) {
-      alert("La contraseña debe tener al menos 6 caracteres.");
-      return;
-    }
-    // Validar contraseña mínima de 7 caracteres
-
-    alert("se completaron las validaciones");
-    //enviar petición...
-  }
-
-}); 
-
 
 

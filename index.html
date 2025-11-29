@@ -64,19 +64,10 @@
 
         <section class="admin-login-form">
           <details>
-            <summary>Abrir panel de administrador</summary>
-              <form class="admin-login-form" id="admin-form">
+            <summary>Acceso para administradores</summary>
                 <fieldset class="fieldset-style">
                   <legend class="texto-azul">Panel de administrador</legend>
-
-                  <label for="admin-email">Correo electronico:</label>
-                  <input placeholder="admin110@gmail.com" id="admin-email" type="email">
-
-                  <label for="admin-password">Contraseña:</label>
-                  <input placeholder="******" id="admin-password" type="password">
-
-                  <button id="btn-send-admin-form" type="submit" class="btn-send-form-generic-style">Continuar al backoffice</button>  
-                  <button id="btn-fill-out-form" type="submit" class="btn-send-form-generic-style">Auto completar datos</button>  
+                  <a class="btn-redirect-back-office" href="http://localhost:3000/login">Redirigirse al back office <ion-icon class="arrow-redirect" name="arrow-forward-outline"></ion-icon></a>
                 </fieldset>
               </form>
           </details>
