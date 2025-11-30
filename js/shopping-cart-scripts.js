@@ -121,8 +121,8 @@ const contadorCarrito = document.querySelector('#contador-carrito');
 
 
 
-//intento darle el valor que este en el localStorage, si no hay, lo declara vacio ([])
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+//intento darle el valor que este en el sessionStorage, si no hay, lo declara vacio ([])
+let carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
 
 
 //#region revisar carrito
@@ -140,9 +140,10 @@ function mostrarCarrito() {
                 `<li class="bloque-item card-carrito">
                 <img src="${item.ruta_img}" alt="${item.nombre}" />
                 <p class="nombre-item">${item.nombre} - $ ${item.precio}</p>
+                <p>Cantidad: ${item.cantidad}</p>
                 <button class="boton-eliminar" onclick="eliminarItem(${indice})">Eliminar</button>
-                <button class="boton-sumar" onclick="sumarItem(${indice})">+ 1</button>
-                <button class="boton-restar" onclick="restarItem(${indice})">- 1</button>
+                <button class="boton-sumar" onclick="sumarItem(${item.id})">+ 1</button>
+                <button class="boton-restar" onclick="restarItem(${item.id},${indice})">- 1</button>
 
             </li>`
 
@@ -150,7 +151,7 @@ function mostrarCarrito() {
         cartaCarrito += `</ul>
         <section class="abajoCarrito">
         <button onclick='vaciarCarrito()'> Vaciar carrito </button>
-        <p>Total:${carrito.reduce((total,a)=>total + a.precio,0)}</p>
+        <p>Total:${carrito.reduce((total,a)=>total + a.precio*a.cantidad,0)}</p>
         </section>
 `;
 //Arriba use un reduce para calcular el total deprecio en el carrito.
@@ -170,31 +171,43 @@ function mostrarCarrito() {
 
 //suma 1 a la cantidad del item en el carrito
 function sumarItem(id){
+  console.log('sumar item');
     cambiarCantidadCarrito(id,1);
 }
 //resta cantidad de items en carrito
-function restarItem(id){
-    cambiarCantidadCarrito(id,-1);
+function restarItem(id,indice){
+    cambiarCantidadCarrito(id,-1,indice);
 }
 
 //cant es +1 o -1
-function cambiarCantidadCarrito(id,cant){
+function cambiarCantidadCarrito(id,cant,indice=-1){
     carrito.forEach(item => {
+
         if(item.id == id){
+          console.log('entra al if');
+          console.log(item.cantidad,cant);
             if(item.cantidad+cant >0){
-                cant+=cant;
+          console.log('entra al segundo if');
+
+              item.cantidad+=cant;
             }else{
+          console.log('entra al else');
+
                 //el if seria: item.cantidad+cant <= 0
-                eliminarItem(id);
+                eliminarItem(indice);
             }
-        }
-    });
+          }
+        });
+
+
+        actualizarsessionStorage();
+        mostrarCarrito();
 }
 
 
-//#region localStorage y carrito
-//CRUD de localStorage y carrito
-//estas funciones manejan tanto el carrito como el localStorage
+//#region sessionStorage y carrito
+//CRUD de sessionStorage y carrito
+//estas funciones manejan tanto el carrito como el sessionStorage
 //cada vez que se modifica algo, se vuelve a mostrar el cambio en pantalla
 //al mismo tiempo se actualizan ambas cosas
 
@@ -206,7 +219,7 @@ function agregarACarrito(id) {
     carrito.push({itemSeleccionado,cantidad:1});
     // carrito.push({id,cantidad:1});
 
-    actualizarLocalStorage();
+    actualizarsessionStorage();
     // mostrarCarrito();
 }
 
@@ -215,25 +228,27 @@ function eliminarItem(indice) {
     //segun el indice a borrar, borra 1
     carrito.splice(indice, 1);
     //vuelve a mostrar el carrito
-    //Y actualiza el localStorage cada vez que se modifica algo
+    //Y actualiza el sessionStorage cada vez que se modifica algo
     // mostrarCarrito();
-    actualizarLocalStorage();
+    actualizarsessionStorage();
+    mostrarCarrito();
 }
 function vaciarCarrito() {
     carrito = [];
     // mostrarCarrito(); //Ya esta en la logica de la funcion, que si no hay nada, no se muestre el apartado carrito
-    actualizarLocalStorage();
+    actualizarsessionStorage();
+    mostrarCarrito();
 }
 //(por lo general no pongo tildes porque queda incomodo en el teclado pero aca quedaba raro sino)
 //usé esta funcion para evitar repetir el llamado a la funcion setItem que tiene dos parametros, me parece mas limpio
-function actualizarLocalStorage() {
-    //si el carrito es inexistente, lo elimina del localStorage
+function actualizarsessionStorage() {
+    //si el carrito es inexistente, lo elimina del sessionStorage
     //para evitar guardar informacion innecesaria (una vez declarado en el local storage, quedaria
     //un carrito = [])
     if (carrito.length === 0) {
-        localStorage.removeItem("carrito");
+        sessionStorage.removeItem("carrito");
     } else {
-        localStorage.setItem("carrito", JSON.stringify(carrito));
+        sessionStorage.setItem("carrito", JSON.stringify(carrito));
     }
 }
 //#endregion
