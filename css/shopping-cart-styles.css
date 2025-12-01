@@ -109,12 +109,23 @@
 
 /* Completar compra */
 .completar-compra {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--color-bordes-1);
+    cursor: pointer;
+
     background-color: var(--color-celeste-1);
-}
-.completar-compra:hover {
-    background-color: var(--color-celeste-3);
+    color: var(--color-negro-1);
 }
 
+.completar-compra:hover {
+    background-color: var(--color-celeste-3);
+    transform: scale(1.05);
+}
 .abajoCarrito p {
     font-size: 1.2rem;
     font-weight: 700;

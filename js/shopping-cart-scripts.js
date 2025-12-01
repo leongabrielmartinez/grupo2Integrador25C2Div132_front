@@ -166,7 +166,7 @@ function mostrarCarrito() {
         <section class="abajoCarrito">
         <button class="vaciar-carrito" onclick='vaciarCarrito()'> Vaciar carrito </button>
         <p>Total:${carrito.reduce((total,a)=>total + a.precio*a.cantidad,0)}</p>
-        <button class="completar-compra" onclick="()">Completar compra</button>
+        <a href="/sales.html" class="completar-compra">Completar compra</a>
         </section>
 `;
 //Arriba use un reduce para calcular el total deprecio en el carrito.
@@ -183,6 +183,9 @@ function mostrarCarrito() {
 }
 
 //#endregion revisar carrito
+
+
+
 
 //suma 1 a la cantidad del item en el carrito
 function sumarItem(id){
