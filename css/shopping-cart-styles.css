@@ -37,10 +37,6 @@
     border: 2px solid var(--color-bordes-1);
 }
 
-.item-info {
-    flex-grow: 1;
-}
-
 .nombre-item {
     margin: 0;
     font-size: 1rem;
@@ -103,12 +99,13 @@
 }
 
 /* Vaciar carrito */
-.abajoCarrito button:first-child {
+.vaciar-carrito{
     background-color: var(--color-rojo-1);
 }
-.abajoCarrito button:first-child:hover {
+.vaciar-carrito:hover{
     background-color: var(--color-rojo-3);
 }
+
 
 /* Completar compra */
 .completar-compra {

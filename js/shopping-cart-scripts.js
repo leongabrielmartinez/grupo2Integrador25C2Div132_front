@@ -164,7 +164,7 @@ function mostrarCarrito() {
         });
         cartaCarrito += `</ul>
         <section class="abajoCarrito">
-        <button onclick='vaciarCarrito()'> Vaciar carrito </button>
+        <button class="vaciar-carrito" onclick='vaciarCarrito()'> Vaciar carrito </button>
         <p>Total:${carrito.reduce((total,a)=>total + a.precio*a.cantidad,0)}</p>
         <button class="completar-compra" onclick="()">Completar compra</button>
         </section>
