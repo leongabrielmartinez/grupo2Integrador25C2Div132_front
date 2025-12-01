@@ -129,7 +129,7 @@ const contenedorProductos = document.querySelector("#contenedorProductos");
 const botonFiltrarTodos = document.getElementById("btn-busqueda-todos");
 const botonFiltrarJuegos = document.getElementById("btn-busqueda-juegos");
 const botonFiltrarConsolas = document.getElementById("btn-busqueda-consolas");
-// const busquedaNombre = document.querySelector("#busqueda-nombre");
+const busquedaNombre = document.querySelector("#busqueda-nombre");
 
 
 
@@ -186,16 +186,16 @@ function verDetalles(id){
 
 // #region revisar filtrar
 // agrega un event listener para cuando se levanta una tecla del teclado
-// busquedaNombre.addEventListener("keyup", () => {
-//     filtrarProductos();
-// });
+busquedaNombre.addEventListener("keyup", () => {
+    filtrarProductos();
+});
 
 //filtra los productos segun lo que esta escrito en la barra de busqueda
-// function filtrarProductos() {
-//     let valorBusqueda = busquedaNombre.value;
-//     let productosFiltrados = productos.filter(f => f.nombre.includes(valorBusqueda));
-//     mostrarProductos(productosFiltrados);
-// }
+function filtrarProductos() {
+    let valorBusqueda = busquedaNombre.value;
+    let productosFiltrados = productos.filter(f => f.nombre.toLowerCase().includes(valorBusqueda));
+    mostrarProductos(productosFiltrados);
+}
 
 //#endregion revisar filtrar
 
