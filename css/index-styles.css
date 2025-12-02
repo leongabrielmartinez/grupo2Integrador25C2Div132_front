@@ -53,57 +53,24 @@ form input:focus {
   outline: none;
 }
 
+.admin-login-form a{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-.btn-send-form-generic-style{
-    background-color: var(--color-rojo-1);
-    font-family: 'Orbitron', sans-serif; 
-    font-weight: 100;
-    border-radius: 6px; 
-    border: 2px solid var(--color-bordes-1);
-    padding-top: 3px;
-    padding-bottom: 3px;
-    color: var(--color-negro-1);
-
-    transition: background-color 0.25s ease, color 0.25s ease;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .toggle-theme-button{
-    background-color: var(--color-celeste-1);
-    margin: 0 auto;      /* lo centra horizontalmente */
-    cursor: pointer;     /* opcional pero recomendado */
-    padding: 3px;
-
-}
-
-/* clase desordenada: */
-.btn-redirect-back-office{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    background-color: var(--color-rojo-1);
-    font-family: 'Orbitron', sans-serif; 
-    font-weight: 100;
-    border-radius: 6px; 
-    border: 2px solid var(--color-bordes-1);
-    padding-top: 3px;
-    padding-bottom: 3px;
-    color: var(--color-negro-1);
-    text-decoration: none;
-    font-size: 14px;
-
-    transition: background-color 0.25s ease, color 0.25s ease;
-}
-
+      background-color: var(--color-celeste-1);
+      margin: 0 auto;      /* lo centra horizontalmente */
+      cursor: pointer;     /* opcional pero recomendado */
+      padding: 3px;
+  
+  }
+  
 .arrow-redirect{
     font-size: 24px;
-}
-
-.btn-redirect-back-office:hover{
-    background-color: var(--color-rojo-2);
-    color: #f7f7f7;
-}
-.btn-send-form-generic-style:hover{
-    background-color: var(--color-rojo-2);
-    color: #f7f7f7;
 }

@@ -254,5 +254,22 @@ header{
     }
 }
 
+    /*==========================================
+      Botones "importantes"
+==========================================*/
 
+.special-red-button{
+    background-color: var(--color-rojo-1);
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 6px;
+    border: 2px solid var(--color-bordes-1);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: var(--color-negro-1);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
 
+.special-red-button:hover{
+    background-color: var(--color-rojo-2);
+    color: #f7f7f7;
+}
