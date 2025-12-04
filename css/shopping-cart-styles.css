@@ -100,10 +100,10 @@
 
 /* Vaciar carrito */
 .vaciar-carrito{
-    background-color: var(--color-rojo-1);
+    background-color: var(--color-celeste-1);
 }
 .vaciar-carrito:hover{
-    background-color: var(--color-rojo-3);
+    background-color: var(--color-celeste-3);
 }
 
 
@@ -117,13 +117,12 @@
     font-weight: 600;
     border: 2px solid var(--color-bordes-1);
     cursor: pointer;
-
-    background-color: var(--color-celeste-1);
+    background-color: var(--color-rojo-1);
     color: var(--color-negro-1);
 }
 
 .completar-compra:hover {
-    background-color: var(--color-celeste-3);
+    background-color: var(--color-rojo-3);
     transform: scale(1.05);
 }
 .abajoCarrito p {
