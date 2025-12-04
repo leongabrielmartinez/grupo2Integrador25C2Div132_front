@@ -166,7 +166,7 @@ function mostrarCarrito() {
         <section class="abajoCarrito">
         <button class="vaciar-carrito" onclick='vaciarCarrito()'> Vaciar carrito </button>
         <p>Total:${carrito.reduce((total,a)=>total + a.precio*a.cantidad,0)}</p>
-        <a id='completar-compra' href="/sales.html" class="completar-compra">Completar compra</a>
+        <button class="completar-compra" onclick="(completarCompra())">Completar compra</button>
         </section>
 `;
 
@@ -276,6 +276,10 @@ function actualizarsessionStorage() {
 }
 //#endregion
 
+function completarCompra(){
+  sessionStorage.setItem("compraActiva", "1");
+  location.replace('sales.html');
+}
 
 function init() {
     mostrarCarrito();

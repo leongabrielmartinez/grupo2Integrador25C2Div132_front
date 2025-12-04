@@ -3,8 +3,21 @@
 main{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+.main-content-container section{
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-/* analizar distribucion del main, para cada caso */
+.main-content-container section th{
+    padding: 10px;
+}
 
+.text-ticket{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
