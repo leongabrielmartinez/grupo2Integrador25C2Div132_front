@@ -4,9 +4,9 @@ let productos = [
     "nombre": "Resident Evil 4 (2023)",
     "precio": 59.99,
     "categoria": "juego",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2023/01/re4remakeps5jpg.jpg",
-    "descripcion": "Resident Evil 4 (2023) es una reimaginación del clásico juego de terror y acción...",
+    "descripcion": "Resident Evil 4 (2023) es una reimaginación del clásico juego de terror y acción que revolucionó el género. En esta versión moderna, se mantiene la esencia del original pero con mejoras visuales impresionantes, una jugabilidad más fluida y un enfoque cinematográfico en cada enfrentamiento. Controlas a Leon S. Kennedy en una misión peligrosa para rescatar a la hija del presidente en un remoto pueblo europeo lleno de enemigos infectados. El juego combina exploración, combate táctico y una atmósfera constante de tensión. Además, incluye nuevas mecánicas, un diseño de sonido inmersivo y escenarios rediseñados que hacen que la experiencia sea tan nostálgica como desafiante para los nuevos jugadores.",
     "empresa_responsable": "Capcom"
   },
   {
@@ -14,9 +14,9 @@ let productos = [
     "nombre": "Street Fighter 6",
     "precio": 59.99,
     "categoria": "juego",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2023/06/Street-Fighter-6-PS4.jpg",
-    "descripcion": "Street Fighter 6 combina un estilo visual moderno con un sistema de combate accesible...",
+    "descripcion": "Street Fighter 6 marca una nueva era para la icónica saga de lucha de Capcom, combinando un estilo visual moderno con un sistema de combate más accesible y profundo. Incluye tres modos principales: Fighting Ground, con las batallas clásicas uno contra uno; World Tour, un modo historia en mundo abierto donde los jugadores crean su propio luchador; y Battle Hub, un espacio social en línea para competir y conectarse con otros jugadores. Su sistema de control Modern y el nuevo medidor Drive permiten tanto a novatos como a veteranos disfrutar de combates estratégicos y dinámicos. Con personajes legendarios y nuevos rostros, Street Fighter 6 redefine el género de peleas con energía, estilo y libertad creativa.",
     "empresa_responsable": "Capcom"
   },
   {
@@ -24,9 +24,9 @@ let productos = [
     "nombre": "Hollow Knight",
     "precio": 14.99,
     "categoria": "juego",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2021/05/hollow-knight-ps4_1.jpg",
-    "descripcion": "Hollow Knight es una aventura de acción 2D que mezcla exploración profunda...",
+    "descripcion": "Hollow Knight es una aventura de acción en 2D que combina exploración profunda, combate desafiante y una atmósfera melancólica en el misterioso reino de Hallownest. Controlas a un pequeño caballero en busca de respuestas sobre una civilización perdida, mientras enfrentas criaturas extrañas y descubres secretos ocultos bajo tierra. Su estilo artístico hecho a mano y su banda sonora evocadora crean una experiencia inmersiva que premia la curiosidad y la paciencia. Cada zona del juego ofrece nuevos enemigos, habilidades y rutas interconectadas, recordando a los clásicos Metroidvania, pero con una identidad única que ha convertido a Hollow Knight en un referente del género indie moderno.",
     "empresa_responsable": "Team Cherry"
   },
   {
@@ -34,9 +34,9 @@ let productos = [
     "nombre": "Red Dead Redemption 2",
     "precio": 49.99,
     "categoria": "juego",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://m.media-amazon.com/images/I/81JuQGZ77WL._SL1500_.jpg",
-    "descripcion": "Obra maestra del mundo abierto creada por Rockstar Games...",
+    "descripcion": "Red Dead Redemption 2 es una obra maestra del género de mundo abierto creada por Rockstar Games. Ambientado en el ocaso del Viejo Oeste, sigues la historia de Arthur Morgan, un forajido miembro de la banda de Van der Linde, mientras lucha por sobrevivir en un mundo en constante cambio. Con un nivel de detalle impresionante, una narrativa profunda y un elenco de personajes inolvidables, el juego ofrece una experiencia cinematográfica única. Su vasto mundo abierto está lleno de misiones, eventos aleatorios, caza, pesca y exploración libre, todo acompañado de una banda sonora épica y una ambientación realista que marca un nuevo estándar en la industria.",
     "empresa_responsable": "Rockstar Games"
   },
   {
@@ -44,9 +44,9 @@ let productos = [
     "nombre": "Diablo IV",
     "precio": 69.99,
     "categoria": "juego",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2023/05/DiabloiVPS5.jpg",
-    "descripcion": "Diablo IV regresa al oscuro mundo de Santuario...",
+    "descripcion": "Diablo IV es la nueva entrega de la aclamada saga de acción RPG de Blizzard Entertainment. Regresa el oscuro mundo de Santuario con una estética gótica y un tono más maduro, ofreciendo una experiencia inmersiva de exploración, combate y progresión de personajes. Los jugadores pueden elegir entre clases como Bárbaro, Hechicera, Pícaro, Druida y Nigromante, cada una con su propio estilo de juego. Con su mundo abierto compartido, mazmorras generadas aleatoriamente y un sistema de botín profundamente adictivo, Diablo IV ofrece acción cooperativa y competitiva, así como un endgame extenso que garantiza cientos de horas de juego.",
     "empresa_responsable": "Blizzard Entertainment"
   },
   {
@@ -54,9 +54,9 @@ let productos = [
     "nombre": "Elden Ring",
     "precio": 59.99,
     "categoria": "juego",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2022/03/Elden-Ring-PS5.jpg",
-    "descripcion": "Elden Ring es un RPG de acción de FromSoftware...",
+    "descripcion": "Elden Ring es un RPG de acción desarrollado por FromSoftware en colaboración con George R. R. Martin. Situado en las Tierras Intermedias, ofrece un vasto mundo abierto lleno de misterios, jefes colosales y una libertad sin precedentes para explorar y combatir. El jugador encarna al Sinluz, un aventurero que busca restaurar el Círculo de Elden y convertirse en el Señor del Anillo. Con su característico desafío, un sistema de combate refinado y una ambientación envolvente, Elden Ring combina la esencia de Dark Souls con la exploración y la narrativa emergente, consolidándose como uno de los juegos más importantes de su generación.",
     "empresa_responsable": "FromSoftware"
   },
   {
@@ -64,9 +64,9 @@ let productos = [
     "nombre": "PlayStation 5",
     "precio": 499.99,
     "categoria": "consola",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://m.media-amazon.com/images/I/61OFeihbEZL._SL1500_.jpg",
-    "descripcion": "La PS5 ofrece experiencia fluida...",
+    "descripcion": "La PlayStation 5 representa la nueva generación de consolas de Sony, ofreciendo una experiencia de juego fluida, inmersiva y visualmente impactante. Su potente hardware, junto con un disco SSD ultrarrápido, reduce los tiempos de carga y permite mundos abiertos mucho más dinámicos. El mando DualSense destaca por su respuesta háptica y gatillos adaptativos, brindando una sensación más realista en cada interacción del juego. Además, la interfaz rediseñada permite un acceso rápido a contenidos y funciones sociales. Con títulos exclusivos y compatibilidad con gran parte del catálogo de PS4, la PS5 se posiciona como una consola versátil, ideal tanto para jugadores casuales como para los más exigentes.",
     "empresa_responsable": "Sony Interactive Entertainment"
   },
   {
@@ -74,9 +74,9 @@ let productos = [
     "nombre": "Microsoft Xbox 360",
     "precio": 149.99,
     "categoria": "consola",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://m.media-amazon.com/images/I/61WqkmreFSL._SL1000_.jpg",
-    "descripcion": "La Xbox 360 impulsó el juego en línea con Xbox Live...",
+    "descripcion": "La Xbox 360 marcó una época en la historia de los videojuegos, destacando por su potente catálogo de títulos y su impulso al juego en línea a través de Xbox Live. Fue la consola que consolidó sagas icónicas como Halo, Gears of War y Forza Motorsport. Además, introdujo una interfaz intuitiva y funciones multimedia que la convirtieron en un centro de entretenimiento completo. Su mando ergonómico, muy elogiado, sentó las bases para los diseños futuros de controladores. Aunque hoy es considerada una consola retro, su legado permanece vivo gracias a la retrocompatibilidad y a su enorme influencia en la industria del gaming moderno.",
     "empresa_responsable": "Microsoft"
   },
   {
@@ -84,9 +84,9 @@ let productos = [
     "nombre": "Sega Saturn",
     "precio": 199.99,
     "categoria": "consola",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://m.media-amazon.com/images/I/91BgiSTufEL._SL1500_.jpg",
-    "descripcion": "Consola ambiciosa enfocada en juegos 2D...",
+    "descripcion": "La Sega Saturn fue una consola adelantada a su tiempo, lanzada a mediados de los 90 con un potente hardware enfocado en juegos 2D y una arquitectura compleja que la hizo difícil de dominar para muchos desarrolladores. A pesar de su competencia con la PlayStation y la Nintendo 64, destacó por ofrecer experiencias únicas, especialmente en títulos arcade, de lucha y shooters japoneses. Su diseño elegante y su catálogo diverso la convirtieron en un objeto de culto para los coleccionistas. Aunque comercialmente no tuvo el éxito esperado, la Saturn dejó una huella importante por su ambición tecnológica y por ser una pieza clave en la historia de Sega.",
     "empresa_responsable": "Sega"
   },
   {
@@ -94,9 +94,9 @@ let productos = [
     "nombre": "Nintendo GameCube",
     "precio": 129.99,
     "categoria": "consola",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://m.media-amazon.com/images/I/616RyUDGfWL._SL1500_.jpg",
-    "descripcion": "Consola compacta con títulos icónicos...",
+    "descripcion": "La Nintendo GameCube fue una consola compacta y potente lanzada en 2001, reconocida por su diseño cúbico y su enfoque en la diversión pura. Contó con un amplio catálogo de juegos icónicos como Super Smash Bros. Melee, Metroid Prime y The Legend of Zelda: The Wind Waker. Aunque no logró superar en ventas a sus competidoras, su mando ergonómico y su potencia gráfica la convirtieron en una favorita de los fans. Hoy en día, la GameCube es recordada con cariño por su innovación, su excelente librería de títulos y su influencia en el diseño de futuras consolas de Nintendo.",
     "empresa_responsable": "Nintendo"
   },
   {
@@ -104,9 +104,9 @@ let productos = [
     "nombre": "Atari 2600",
     "precio": 89.99,
     "categoria": "consola",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://m.media-amazon.com/images/I/71HESRbyxDL._SL1500_.jpg",
-    "descripcion": "Una de las consolas más importantes de la historia...",
+    "descripcion": "La Atari 2600 es una de las consolas más importantes en la historia de los videojuegos. Lanzada a finales de los años 70, fue pionera en llevar la diversión del arcade a los hogares. Su sistema de cartuchos intercambiables permitió a los jugadores disfrutar de una gran variedad de títulos, incluidos clásicos como Space Invaders y Pitfall!. Aunque sus gráficos eran simples, su impacto cultural y comercial marcó el inicio de la industria moderna del videojuego. Hoy, la Atari 2600 sigue siendo un símbolo de la era dorada del gaming retro.",
     "empresa_responsable": "Atari, Inc."
   },
   {
@@ -114,13 +114,13 @@ let productos = [
     "nombre": "Nintendo Switch",
     "precio": 299.99,
     "categoria": "consola",
-    "activo": 0,
+    "activo": 1,
     "imagen_direccion": "https://m.media-amazon.com/images/I/71wpE+ZIehL._SL1500_.jpg",
-    "descripcion": "Consola híbrida que combina portabilidad con sobremesa...",
+    "descripcion": "La Nintendo Switch combina la portabilidad de una consola portátil con la potencia de una consola de sobremesa. Su sistema híbrido permite jugar en cualquier lugar, ya sea en modo portátil, en tabletop o conectado al televisor. Con títulos de gran éxito como The Legend of Zelda: Breath of the Wild y Super Mario Odyssey, la Switch ofrece una experiencia versátil y accesible para todo tipo de jugadores. Su enfoque en la innovación, la jugabilidad local y el multijugador online la han convertido en una de las consolas más exitosas de Nintendo.",
     "empresa_responsable": "Nintendo"
   }
-]
-;
+];
+
 
 
 
@@ -130,7 +130,7 @@ const botonFiltrarTodos = document.getElementById("btn-busqueda-todos");
 const botonFiltrarJuegos = document.getElementById("btn-busqueda-juegos");
 const botonFiltrarConsolas = document.getElementById("btn-busqueda-consolas");
 const busquedaNombre = document.querySelector("#busqueda-nombre");
-
+const numeroCarrito = document.getElementById("numero-carrito");
 
 
 
@@ -152,7 +152,7 @@ botonFiltrarConsolas.addEventListener("click", () => {
 });
 
 
-function recortarDescripcion(texto, max = 40) {
+function recortarDescripcion(texto, max = 100) {
 
   if (texto.length > max) {
     return texto.substring(0, max) + "...";
@@ -167,22 +167,67 @@ function mostrarProductos(productos, filtro="todos") {
       productos = productos.filter(item => item.categoria === filtro)
     }
     productos.forEach((item) => {
-        cartaProducto += `
-              <div class="card-producto">
-                  <img src="${item.imagen_direccion}" alt="${item.nombre}" />
-                  <h5>${item.nombre}</h3>
-                  <p class='card-descripcion'>${recortarDescripcion(item.descripcion)}</p>
-                  <p>$ ${item.precio}</p>
-                  <button class='btn-generico' onclick="agregarACarrito(${item.id})">Agregar al carrito</button>`+
-                  // <button class='btn-generico' onclick="verDetalles(${item.id})">Ver detalles</button>
-              `</div> `;
+    cartaProducto += `
+        <div class="card-producto">
+            <img src="${item.imagen_direccion}" alt="${item.nombre}" />
+            <h4>${item.nombre}</h4>
+            <p class="card-descripcion">${recortarDescripcion(item.descripcion)}</p>
+            <p>$ ${item.precio}</p>
+            <button class="special-red-button" onclick="agregarACarrito(${item.id})">
+                <ion-icon class="icono-card" name="cart-outline"></ion-icon>
+                Comprar
+            </button>
+            <button class="special-red-button btn-detalles" onclick="verDetalles(${item.id})">
+                <ion-icon class="icono-card" name="alert-circle-outline"></ion-icon>
+                Detalles
+            </button>
+        </div>
+    `;
+
     });
     contenedorProductos.innerHTML = cartaProducto;
 }
 
 function verDetalles(id){
-  console.log(`Redirige a detalles del producto ${id}`);
+      //declara un auxiliar para despues reemplazar en el html
+    let producto = "";
+
+    productos.forEach((item) => {
+    if(item.id === id){
+      let descripcionAdaptada = reemplazarPuntosPorSalto(item.descripcion);
+
+
+      producto = `
+          <div class="card-producto card-producto-extendida">
+              <img src="${item.imagen_direccion}" alt="${item.nombre}" />
+              <div class="descripcion-completa-texto">
+              <h4>${item.nombre}</h4>
+              <p>Desarrollador: <span class="texto-azul">${item.empresa_responsable}</span></p>
+              <p><span class="texto-azul">${descripcionAdaptada}</span></p>
+              <p><span class="texto-azul">Precio: </span>$ ${item.precio}</p>
+              <button class="special-red-button" onclick="agregarACarrito(${item.id})">
+              <ion-icon class="icono-card" name="cart-outline"></ion-icon>
+              Comprar
+              </button>
+              <button class="special-red-button btn-detalles" onclick="init()">
+              <ion-icon class="icono-card" name="alert-circle-outline"></ion-icon>
+              Volver
+              </button>
+              </div>
+          </div>
+    `;
+    }
+    });
+    contenedorProductos.innerHTML = producto;
 }
+
+
+function reemplazarPuntosPorSalto(texto) {
+    return texto.replace(/\. /g, ".<br><br>");
+}
+
+
+
 
 // #region revisar filtrar
 // agrega un event listener para cuando se levanta una tecla del teclado
@@ -213,6 +258,7 @@ function agregarACarrito(id) {
   let itemSeleccionado = productos.find(f => f.id === id);
   verificarExistenciaEnCarrito(itemSeleccionado);
   actualizarsessionStorage();
+  numeroCarrito.innerHTML = carrito.length;
 }
 
 function verificarExistenciaEnCarrito(item){
@@ -246,6 +292,7 @@ function actualizarsessionStorage() {
 
 
 function init() {
+    numeroCarrito.innerHTML = carrito.length;
     mostrarProductos(productos);
 
 }
