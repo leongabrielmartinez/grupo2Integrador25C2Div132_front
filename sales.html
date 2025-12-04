@@ -11,6 +11,7 @@
       <title>Gaming shop</title>
       <link rel="icon" type="image/png" href="src/favicon-96x96.png" />
       <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+      <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
   </head>
 
   <body>
@@ -43,10 +44,26 @@
 
     <main>
         <div class="main-content-container">
+          <section id="sales-container">
+          <!-- Se realiza una peticion al backend y se inyectan tablas con js -->
+          <!-- Lo siguiente es solo ejemplo: -->
+                <table border="1" style="border-collapse: collapse; margin: 20px;">
+                  <thead>
+                    <tr>
+                      <th>Cantidad productos - Importe</th>
+                      <th>Descargar ticket</th>
+                    </tr>
+                  </thead>
 
-            <p>Branch merge needed!</p>
+                  <tbody>
+                    <tr id="actual-sale-container">
+                    </tr>
+                  </tbody>
+                </table> 
+          </section>
 
         </div>
+    </main>     
     </main>     
 
   </body>
