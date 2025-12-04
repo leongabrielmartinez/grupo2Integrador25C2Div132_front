@@ -21,9 +21,13 @@ function renderizarTabla(){
     actualSaleConteiner.innerHTML = stringTabla;
 }
 
-function imprimirTicket(precioTotal) { 
-    let carrito = JSON.parse(sessionStorage.getItem("carrito"));
-  
+function imprimirTicket() { 
+    const carrito = sessionStorage.getItem("carrito");
+    const carritoParsed = JSON.parse(carrito);
+    const precioTotal = carritoParsed.reduce((total, producto) => 
+        total + (Number(producto.precio) * Number(producto.cantidad)), 0
+    , 0);
+    
     // Para registrar las ventas a posteriori, guardaremos los ids de los productos del carrito
     let idProductos = []; // Array vacio de ids de producto
 
@@ -59,7 +63,7 @@ function imprimirTicket(precioTotal) {
 
 
     // ===== LISTA DE PRODUCTOS =====
-    carrito.forEach(producto => {
+    carritoParsed.forEach(producto => {
         idProductos.push(producto.id);
 
         // Limitar nombre para no romper el ticket
@@ -109,33 +113,30 @@ function imprimirTicket(precioTotal) {
 
 async function registrarVenta(precioTotal, idProductos) {
     let nombreUsuario = sessionStorage.getItem("userName");
+    const carrito = JSON.parse(sessionStorage.getItem("carrito"));
 
     const data = {
         user_name: nombreUsuario,
         total_price: precioTotal,
-        products: idProductos
+        products: idProductos,
+        arrayProductos: carrito 
     }
 
     const response = await fetch("http://localhost:3000/api/sales", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
     });
 
-
     const result = await response.json();
 
-
-    if(response.ok) {
-        console.log(response);
-        alert(result.message);
-    } else {
-        alert(result.message);
+    if(response.ok) { console.log(response); 
+        alert(result.message); 
+    } else { 
+        alert(result.message); 
     }
-
 }
+
 
 function iniciarBoton(){
     const boton_imprimir = document.getElementById("boton_imprimir");
@@ -152,7 +153,7 @@ function init(){
         const idProductos = carritoParsed.map(producto => producto.id);
 
         registrarVenta(precioTotal, idProductos);
-        renderizarTabla(precioTotal);
+        renderizarTabla();
         iniciarBoton();    
         sessionStorage.setItem("compraActiva", "0");
     }
