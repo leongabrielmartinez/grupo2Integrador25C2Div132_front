@@ -1,127 +1,4 @@
 //reemplazar con query
-let productos = [
-  {
-    "id": 1,
-    "nombre": "Resident Evil 4 (2023)",
-    "precio": 59.99,
-    "categoria": "juego",
-    "activo": 0,
-    "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2023/01/re4remakeps5jpg.jpg",
-    "descripcion": "Resident Evil 4 (2023) es una reimaginación del clásico juego de terror y acción...",
-    "empresa_responsable": "Capcom"
-  },
-  {
-    "id": 2,
-    "nombre": "Street Fighter 6",
-    "precio": 59.99,
-    "categoria": "juego",
-    "activo": 0,
-    "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2023/06/Street-Fighter-6-PS4.jpg",
-    "descripcion": "Street Fighter 6 combina un estilo visual moderno con un sistema de combate accesible...",
-    "empresa_responsable": "Capcom"
-  },
-  {
-    "id": 3,
-    "nombre": "Hollow Knight",
-    "precio": 14.99,
-    "categoria": "juego",
-    "activo": 0,
-    "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2021/05/hollow-knight-ps4_1.jpg",
-    "descripcion": "Hollow Knight es una aventura de acción 2D que mezcla exploración profunda...",
-    "empresa_responsable": "Team Cherry"
-  },
-  {
-    "id": 4,
-    "nombre": "Red Dead Redemption 2",
-    "precio": 49.99,
-    "categoria": "juego",
-    "activo": 0,
-    "imagen_direccion": "https://m.media-amazon.com/images/I/81JuQGZ77WL._SL1500_.jpg",
-    "descripcion": "Obra maestra del mundo abierto creada por Rockstar Games...",
-    "empresa_responsable": "Rockstar Games"
-  },
-  {
-    "id": 5,
-    "nombre": "Diablo IV",
-    "precio": 69.99,
-    "categoria": "juego",
-    "activo": 0,
-    "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2023/05/DiabloiVPS5.jpg",
-    "descripcion": "Diablo IV regresa al oscuro mundo de Santuario...",
-    "empresa_responsable": "Blizzard Entertainment"
-  },
-  {
-    "id": 6,
-    "nombre": "Elden Ring",
-    "precio": 59.99,
-    "categoria": "juego",
-    "activo": 0,
-    "imagen_direccion": "https://playtecgames.com/wp-content/uploads/2022/03/Elden-Ring-PS5.jpg",
-    "descripcion": "Elden Ring es un RPG de acción de FromSoftware...",
-    "empresa_responsable": "FromSoftware"
-  },
-  {
-    "id": 7,
-    "nombre": "PlayStation 5",
-    "precio": 499.99,
-    "categoria": "consola",
-    "activo": 0,
-    "imagen_direccion": "https://m.media-amazon.com/images/I/61OFeihbEZL._SL1500_.jpg",
-    "descripcion": "La PS5 ofrece experiencia fluida...",
-    "empresa_responsable": "Sony Interactive Entertainment"
-  },
-  {
-    "id": 8,
-    "nombre": "Microsoft Xbox 360",
-    "precio": 149.99,
-    "categoria": "consola",
-    "activo": 0,
-    "imagen_direccion": "https://m.media-amazon.com/images/I/61WqkmreFSL._SL1000_.jpg",
-    "descripcion": "La Xbox 360 impulsó el juego en línea con Xbox Live...",
-    "empresa_responsable": "Microsoft"
-  },
-  {
-    "id": 9,
-    "nombre": "Sega Saturn",
-    "precio": 199.99,
-    "categoria": "consola",
-    "activo": 0,
-    "imagen_direccion": "https://m.media-amazon.com/images/I/91BgiSTufEL._SL1500_.jpg",
-    "descripcion": "Consola ambiciosa enfocada en juegos 2D...",
-    "empresa_responsable": "Sega"
-  },
-  {
-    "id": 10,
-    "nombre": "Nintendo GameCube",
-    "precio": 129.99,
-    "categoria": "consola",
-    "activo": 0,
-    "imagen_direccion": "https://m.media-amazon.com/images/I/616RyUDGfWL._SL1500_.jpg",
-    "descripcion": "Consola compacta con títulos icónicos...",
-    "empresa_responsable": "Nintendo"
-  },
-  {
-    "id": 11,
-    "nombre": "Atari 2600",
-    "precio": 89.99,
-    "categoria": "consola",
-    "activo": 0,
-    "imagen_direccion": "https://m.media-amazon.com/images/I/71HESRbyxDL._SL1500_.jpg",
-    "descripcion": "Una de las consolas más importantes de la historia...",
-    "empresa_responsable": "Atari, Inc."
-  },
-  {
-    "id": 12,
-    "nombre": "Nintendo Switch",
-    "precio": 299.99,
-    "categoria": "consola",
-    "activo": 0,
-    "imagen_direccion": "https://m.media-amazon.com/images/I/71wpE+ZIehL._SL1500_.jpg",
-    "descripcion": "Consola híbrida que combina portabilidad con sobremesa...",
-    "empresa_responsable": "Nintendo"
-  }
-]
-;
 
 
 
@@ -178,10 +55,6 @@ function mostrarCarrito() {
 
         console.log(carrito);
     }
-    let completar_compra=document.getElementById('completar-compra');
-    completar_compra.addEventListener('click',(e)=>{
-      sessionStorage.setItem('compraActiva',JSON.stringify({value:1}));
-    })
     //actualiza el nav con la cantidad de productos
     contadorCarrito.textContent = `Carrito: ${carrito.length} Productos`
     //se muestra si o si, por lo que esta afuera del if
@@ -194,7 +67,6 @@ function mostrarCarrito() {
 
 //suma 1 a la cantidad del item en el carrito
 function sumarItem(id){
-  console.log('sumar item');
     cambiarCantidadCarrito(id,1);
 }
 //resta cantidad de items en carrito
@@ -207,15 +79,11 @@ function cambiarCantidadCarrito(id,cant,indice=-1){
     carrito.forEach(item => {
 
         if(item.id == id){
-          console.log('entra al if');
           console.log(item.cantidad,cant);
             if(item.cantidad+cant >0){
-          console.log('entra al segundo if');
 
               item.cantidad+=cant;
             }else{
-          console.log('entra al else');
-
                 //el if seria: item.cantidad+cant <= 0
                 eliminarItem(indice);
             }
