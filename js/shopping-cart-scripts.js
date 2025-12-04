@@ -166,9 +166,11 @@ function mostrarCarrito() {
         <section class="abajoCarrito">
         <button class="vaciar-carrito" onclick='vaciarCarrito()'> Vaciar carrito </button>
         <p>Total:${carrito.reduce((total,a)=>total + a.precio*a.cantidad,0)}</p>
-        <a href="/sales.html" class="completar-compra">Completar compra</a>
+        <a id='completar-compra' href="/sales.html" class="completar-compra">Completar compra</a>
         </section>
 `;
+
+
 //Arriba use un reduce para calcular el total deprecio en el carrito.
 //Se va actualizando cada vez que se llama a esta funcion, por lo que siempre tiene el precio actualizado
         //actualiza lo que se ve del carrito
@@ -176,7 +178,10 @@ function mostrarCarrito() {
 
         console.log(carrito);
     }
-
+    let completar_compra=document.getElementById('completar-compra');
+    completar_compra.addEventListener('click',(e)=>{
+      sessionStorage.setItem('compraActiva',JSON.stringify({value:1}));
+    })
     //actualiza el nav con la cantidad de productos
     contadorCarrito.textContent = `Carrito: ${carrito.length} Productos`
     //se muestra si o si, por lo que esta afuera del if
