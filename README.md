@@ -1,6 +1,7 @@
 # Gaming Shop
 
-**Gaming Shop** es una tienda de videojuegos y consolas físicas. Esta aplicación emula el funcionamiento de los "tótems electrónicos" para solicitar pedidos.
+**Gaming Shop** es una tienda de videojuegos y consolas físicas. 
+Esta aplicación emula el funcionamiento de los "tótems electrónicos" para solicitar pedidos.
 
 Cuenta con múltiples vistas para la gestión de pedidos, siendo las 4 principales las siguientes:
 
