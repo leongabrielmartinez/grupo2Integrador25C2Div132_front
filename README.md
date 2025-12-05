@@ -1,4 +1,4 @@
-# Gaming Shop
+# Gaming Shop (front-end).
 
 **Gaming Shop** es una tienda de videojuegos y consolas físicas. 
 
