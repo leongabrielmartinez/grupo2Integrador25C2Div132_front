@@ -24,6 +24,7 @@ function mostrarCarrito() {
         <h3>Carrito</h3>
         <ul class='contenedor-items-carrito'>`;
         carrito.forEach((item, indice) => {
+         
             cartaCarrito +=
                 `<li class="bloque-item card-carrito">
                 <div class="item-info">
