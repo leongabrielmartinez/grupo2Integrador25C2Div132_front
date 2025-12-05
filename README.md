@@ -6,7 +6,7 @@ Esta aplicación emula el funcionamiento de los "tótems electrónicos" para sol
 
 Cuenta con múltiples vistas para la gestión de pedidos, siendo las 4 principales las siguientes:
 
-- *Index*: Ingresar nombre y seleccionar color.
-- *Products*: Visualizar productos, filtrarlos y agregarlos al carrito.
-- *Shopping Cart*: Seleccionar cantidad de productos y finalizar la compra.
-- *Sales*: Visualizar el ticket en PDF y finalizar el proceso.
+- **Index**: ingresar nombre y seleccionar color.
+- **Products**: visualizar productos, filtrarlos y agregarlos al carrito.
+- **Shopping Cart**: seleccionar cantidad de productos y finalizar la compra.
+- **Sales**: visualizar el ticket en PDF y finalizar el proceso.
